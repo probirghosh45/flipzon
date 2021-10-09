@@ -1,13 +1,4 @@
-import {
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from '@material-ui/core';
+import {Button,Card,CardActionArea,CardActions,CardContent,CardMedia,Grid,Typography} from '@material-ui/core';
 import Layout from '../components/Layout';
 import data from '../utils/data';
 

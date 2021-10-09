@@ -1,9 +1,14 @@
-import { AppBar, Container, Toolbar, Typography } from '@material-ui/core';
+import {
+  AppBar,
+  Container,
+  Link,
+  Toolbar,
+  Typography,
+} from '@material-ui/core';
 import Head from 'next/head';
 import useStyles from '../utils/styles';
 
-export default function Layout  ({children})  {
-
+export default function Layout({ children }) {
   const classes = useStyles();
 
   return (
@@ -13,19 +18,22 @@ export default function Layout  ({children})  {
       </Head>
       <AppBar position="fixed" className={classes.navbar}>
         <Toolbar>
-          <Typography>Flipzon</Typography>
+          <Link href="/">
+            <Typography className={classes.brand}>Flipzon</Typography>
+          </Link>
+          <div className={classes.grow}></div>
+          <div>
+          <Link href="/cart">Cart</Link>
+          <Link href="/login">Login</Link>
+          </div>
         </Toolbar>
       </AppBar>
-      <Container className={classes.main}>
-       {children}
-      </Container>
+      <Container className={classes.main}>{children}</Container>
       <footer>
-          <Typography className={classes.footer}>
-              All Right Reserved by Next-Flipzon.
-          </Typography>
+        <Typography className={classes.footer}>
+          All Right Reserved by Next-Flipzon.
+        </Typography>
       </footer>
     </div>
   );
-};
-
-
+}
