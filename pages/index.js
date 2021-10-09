@@ -1,4 +1,14 @@
-import {Button,Card,CardActionArea,CardActions,CardContent,CardMedia,Grid,Typography} from '@material-ui/core';
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Link,
+  Typography,
+} from '@material-ui/core';
 import Layout from '../components/Layout';
 import data from '../utils/data';
 
@@ -11,20 +21,24 @@ export default function Home() {
           {data.products.map((product) => (
             <Grid item md={4} key={product.name}>
               <Card>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    image={product.image}
-                    title={product.name}
-                  />
-                  <CardContent>
-                    <Typography>{product.name}</Typography>
-                  </CardContent>
-                </CardActionArea>
-                 <CardActions>
-                   <Typography>${product.price}</Typography>
-                   <Button size="small" color="primary" >Add to Cart</Button>
-                 </CardActions>
+                <Link href={`/product/${product.slug}`}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={product.image}
+                      title={product.name}
+                    />
+                    <CardContent>
+                      <Typography>{product.name}</Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Link>
+                <CardActions>
+                  <Typography>${product.price}</Typography>
+                  <Button size="small" color="primary">
+                    Add to Cart
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}
