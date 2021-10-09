@@ -1,0 +1,72 @@
+const data ={
+    products:[
+        {
+            name: 'Free Shirt',
+            category:'Shirts',
+            image:'/images/shirt1.jpg',
+            price:79,
+            brand:'Nike',
+            rating:4.5,
+            numReviews:13,
+            countInStock:20,
+            description: 'A Popular Shirt',
+        },
+        {
+            name: 'Fit Shirt',
+            category:'Shirts',
+            image:'/images/shirt2.jpg',
+            price:89,
+            brand:'Adidas',
+            rating:4.2,
+            numReviews:28,
+            countInStock:15,
+            description: 'A Popular Shirt',
+        },
+        {
+            name: 'Slim Shirt',
+            category:'Shirts',
+            image:'/images/shirt3.jpg',
+            price:79,
+            brand:'Raymond',
+            rating:4.5,
+            numReviews:17,
+            countInStock:27,
+            description: 'A Popular Shirt',
+        },
+        {
+            name: 'Golf Pants',
+            category:'Pants',
+            image:'/images/pants1.jpg',
+            price:149,
+            brand:'Oliver',
+            rating:4.5,
+            numReviews:35,
+            countInStock:30,
+            description: 'Smart Looking Pants',
+        },
+        {
+            name: 'Fit Pants',
+            category:'Pants',
+            image:'/images/pants2.jpg',
+            price:199,
+            brand:'Zara',
+            rating:4.5,
+            numReviews:45,
+            countInStock:35,
+            description: 'A Popular Pants',
+        },
+        {
+            name: 'Classic Pants',
+            category:'Pants',
+            image:'/images/pants3.jpg',
+            price:149,
+            brand:'Lotto',
+            rating:4.5,
+            numReviews:45,
+            countInStock:35,
+            description: 'A Popular Pants',
+        }
+    ]
+}
+
+export default data ;
