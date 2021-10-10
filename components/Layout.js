@@ -8,13 +8,14 @@ import {
 import Head from 'next/head';
 import useStyles from '../utils/styles';
 
-export default function Layout({ children }) {
+export default function Layout({ title,description, children }) {
   const classes = useStyles();
 
   return (
     <div>
       <Head>
-        <title>Flipzon | Next</title>
+        <title>{title?`${title}-Flipzon`: 'Flipzon'}</title>
+       {description && <meta name="description" content={description}></meta>}
       </Head>
       <AppBar position="fixed" className={classes.navbar}>
         <Toolbar>
@@ -23,8 +24,8 @@ export default function Layout({ children }) {
           </Link>
           <div className={classes.grow}></div>
           <div>
-          <Link href="/cart">Cart</Link>
-          <Link href="/login">Login</Link>
+            <Link href="/cart">Cart</Link>
+            <Link href="/login">Login</Link>
           </div>
         </Toolbar>
       </AppBar>
