@@ -6,7 +6,7 @@ import {
   List,
   ListItem,
   Button,
-} from '@material-ui/core';
+} from '@mui/material';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Layout from '../../components/Layout';
@@ -43,8 +43,8 @@ export default function ProductScreen() {
         </Grid>
         <Grid item md={3} xs={12}>
           <List>
-          <ListItem>
-              <Typography component="h1" >{product.name}</Typography>
+            <ListItem>
+              <Typography component="h1">{product.name}</Typography>
             </ListItem>
             <ListItem>
               <Typography>Category: {product.category}</Typography>
@@ -65,7 +65,7 @@ export default function ProductScreen() {
         <Grid item md={3} xs={12}>
           <Card>
             <List>
-            <ListItem>
+              <ListItem>
                 <Grid container>
                   <Grid item xs={6}>
                     <Typography>Price</Typography>
@@ -81,7 +81,9 @@ export default function ProductScreen() {
                     <Typography>Status</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography>{product.countInStock>0?'In Stock': 'Unavailable'}</Typography>
+                    <Typography>
+                      {product.countInStock > 0 ? 'In Stock' : 'Unavailable'}
+                    </Typography>
                   </Grid>
                 </Grid>
               </ListItem>

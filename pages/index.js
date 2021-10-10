@@ -8,7 +8,7 @@ import {
   Grid,
   Link,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material/';
 import Layout from '../components/Layout';
 import data from '../utils/data';
 
